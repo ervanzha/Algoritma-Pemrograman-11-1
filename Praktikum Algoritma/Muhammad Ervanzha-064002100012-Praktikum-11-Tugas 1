@@ -1,0 +1,35 @@
+@author: ervan
+"""
+
+class Mahasiswa:
+
+    jumlah = 0
+
+    def _init_(self,nama,nim,tahun):
+        self.nama = str.upper(nama)
+        self.nim = str(nim)
+        self.tahun = str(tahun)
+        Mahasiswa.jumlah += 1
+
+    def biodata(self):
+        return str(f'{self.nama} ; {self.nim} ; {self.tahun}')
+
+    def JumlahData(self):
+        print()
+        print('Nama:',self.nama)
+        print('NIM:',self.nim)
+        print('Tahun:',self.tahun)
+        print()
+        input(f'Jumlah sekarang adalah {Mahasiswa.jumlah} orang\nPRESS ENTER')
+
+
+while True:
+    print(f'\nMahasiswa KE {(Mahasiswa.jumlah)+1}\nKetik exit untuk mengakhiri!')
+    x = str(input('Masukan Nama Anda: '))
+    if x == 'exit':
+        break
+    y = str(input('Masukan NIM Anda: '))
+    z = str(input('Masukan Angkatan Anda: '))
+    n = Mahasiswa(x,y,z)
+
+    n.JMLHDATA()
